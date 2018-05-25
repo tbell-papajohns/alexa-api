@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: alexa-skill-handler-config
+  namespace: alexa
+data:
+  PJI_ENVIRONMENT: qa
+  ENDPOINT_HOST: qa.papajohns.com  
+  ENDPOINT_PORT: 443
+  ENDPOINT_PROTOCOL: https
+  ALEXA_PROMO_CODE: 25ALEXA
+  SERVER_FILE_PATH: /opt/servers.json
+  CERT_FILE_NAME: /opt/cert.txt  
+  VERBIAGE_BUCKET_NAME: alexa-handler
+  VERBIAGE_FILE_NAME: dev/alexa-verbiage.properties

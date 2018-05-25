@@ -1,0 +1,96 @@
+info:
+  app:
+    name: Alexa Skill Handler
+    description:   This application is a handler application which listens to all events from alexa device.
+    version: 0.0.1
+    
+pji:
+  endpoint:
+    add:
+      cart:
+        details:
+          url: /api/v2/cart/items
+    customer:
+      card:
+        list:
+          url: /api/v2/customers/{customerId}/cards
+      details: /api/v2/customers/{customerId}
+      favorite:
+        url: /api/v2/customers/{customerId}/favorites/{favoriteId}?store={store}
+      favorites:
+        list:
+          url: /api/v2/customers/{customerId}/favorites?store={store}
+      past:
+        orders:
+          url: /api/v2/customers/{customerId}/orders/{storeId}/past
+    store:
+      search:
+        url: /api/v2/stores?searchType={searchType}&locationType={locationType}&street={street}&city={city}&postalCode={postalCode}&roomType={roomType}
+    submit:
+      order:
+        details: /api/v2/orders
+    order:
+      ready:
+        estimate: /api/v2/orders/{orderNumber}/orderReadyEstimate?subId={subId}
+    headers:
+      pjauthorization: pj-authorization
+      client:
+       appname: pj-client-app
+       appvalue: alexa
+    method:
+      delete: DELETE
+      get: GET
+      post: POST
+      put: PUT
+  oauth:
+    jwt:
+      body:
+        customerid: sub
+        pjtoken: pj-authorization
+slot:
+  name:
+    OrderName: OrderName
+    OrderType: OrderType
+    address:
+      confirmation: AddressConfirmation
+    card:
+      confirmation: CardConfirmation
+    cart:
+      confirmation: CartConfirmation
+    order:
+      confirmation: OrderConfirmation
+      type:
+        confirmation: OrderTypeConfirmation
+    payment:
+      method: PaymentMethod
+intent:
+  name:
+    cancel: AMAZON.CancelIntent
+    clear: clear
+    order: order
+    startover: AMAZON.StartOverIntent
+    stop: AMAZON.StopIntent
+    help: AMAZON.HelpIntent
+    outofmvp: OutOfMVPScope
+
+---
+spring:
+  profiles: docker
+pji:
+  alexa:
+    promocode: ${ALEXA_PROMO_CODE}
+  endpoint:
+    environment: ${PJI_ENVIRONMENT}   
+    host:  ${ENDPOINT_HOST}
+    port: ${ENDPOINT_PORT}
+    protocol: ${ENDPOINT_PROTOCOL}
+  server: 
+    filename: ${SERVER_FILE_PATH}
+  oauth:
+   cert:
+    file: ${CERT_FILE_NAME}    
+verbage:
+ bucket:
+  name: ${VERBIAGE_BUCKET_NAME}
+ file:
+  name: ${VERBIAGE_FILE_NAME}

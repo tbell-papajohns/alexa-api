@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: alexa-skill-handler-ingress
+spec:
+  backend:
+    serviceName: order-api-service
+    servicePort: 80  
+  rules:
+  - http:
+     paths:
+     - path: /handler
+       backend:
+         serviceName: alexa-skill-handler-service
+         servicePort: 80

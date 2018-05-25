@@ -1,0 +1,44 @@
+[
+  {
+    "name": "qa",
+    "urlPrefix": "https://qa.papajohns.com",
+    "deliveryAlertUrl":"https://papajohns-qual.apigee.net/api/v1/",
+    "userAndPassword": "Devu$er1:@kamaipa$$w0rd",
+    "disableAltEncodings": true
+  },
+  {
+    "name": "dev1",
+    "urlPrefix": "https://dev1.papajohns.com",
+    "deliveryAlertUrl":"https://papajohns-dev1.apigee.net/api/v1/",
+    "userAndPassword": "Devu$er1:@kamaipa$$w0rd",
+    "disableAltEncodings": true
+  },
+  {
+    "name": "dev2",
+    "urlPrefix": "https://dev2.papajohns.com",
+    "deliveryAlertUrl":"https://papajohns-dev1.apigee.net/api/v1/",
+    "userAndPassword": "Devu$er1:@kamaipa$$w0rd",
+    "disableAltEncodings": true
+  },
+  {
+    "name": "LR",
+    "urlPrefix": "https://lr.papajohns.com",
+    "deliveryAlertUrl":"https://papajohns-dev1.apigee.net/api/v1/",
+    "userAndPassword": "",
+    "disableAltEncodings": true
+  },
+  {
+    "name": "TEST1",
+    "urlPrefix": "https://test1.papajohns.com",
+    "deliveryAlertUrl":"https://papajohns-dev1.apigee.net/api/v1/",
+    "userAndPassword": "Devu$er1:@kamaipa$$w0rd",
+    "disableAltEncodings": true
+  },
+  {
+    "name": "Prod",
+    "urlPrefix": "https://www.papajohns.com",
+    "deliveryAlertUrl":"https://papajohns-api-prod.apigee.net/api/v1/",
+    "userAndPassword": "",
+    "disableAltEncodings": true
+  }
+]

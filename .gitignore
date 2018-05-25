@@ -1,0 +1,15 @@
+# IntelliJ generated files
+*.iml
+.idea/
+
+# Maven build dirs
+target/
+out/
+
+# OS-specific files
+.DS_Store
+
+# Docker volumes
+docker/volumes
+docker/.env
+

@@ -1,0 +1,16 @@
+runtime: custom
+env: flex
+service: ask-handler-dev
+endpoints_api_service:
+  name: "ask.endpoints.orders-dev-pj.appspot.com"
+  config_id: "2018-04-23r2"
+env_variables:
+  PJI_ENVIRONMENT: dev1
+  ENDPOINT_HOST: dev1.papajohns.com  
+  ENDPOINT_PORT: '443'
+  ENDPOINT_PROTOCOL: https
+  ALEXA_PROMO_CODE: 25ALEXA
+  SERVER_FILE_PATH: /opt/servers.json
+  CERT_FILE_NAME: /opt/cert.txt  
+  VERBIAGE_BUCKET_NAME: alexa-handler
+  VERBIAGE_FILE_NAME: dev/alexa-verbiage.properties

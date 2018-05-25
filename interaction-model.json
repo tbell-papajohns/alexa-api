@@ -1,0 +1,1012 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "wizard space",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "please cancel",
+                        "cancel order",
+                        "cancel this",
+                        "Okay cancel",
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "what else i can order",
+                        "tell me more about it",
+                        "tell me more",
+                        "more",
+                        "can you ellaborate",
+                        "help please",
+                        "help me",
+                        "how can I order",
+                        "can you tell me about the skill",
+                        "I don't know how to use this",
+                        "how do I use this",
+                        "what can you do",
+                        "how do I pay",
+                        "what can I order",
+                        "I need help",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "okay please stop the order",
+                        "Ok stop",
+                        "stop the order",
+                        "exit order",
+                        "I dont want this",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "order",
+                    "slots": [
+                        {
+                            "name": "OrderType",
+                            "type": "OrderType",
+                            "samples": [
+                                "order my {OrderType}",
+                                "{OrderType}"
+                            ]
+                        },
+                        {
+                            "name": "OrderName",
+                            "type": "SearchFavorite"
+                        },
+                        {
+                            "name": "AddressConfirmation",
+                            "type": "YES_NO_MORE_TYPE"
+                        },
+                        {
+                            "name": "OrderConfirmation",
+                            "type": "YES_NO_MORE_TYPE"
+                        },
+                        {
+                            "name": "CartConfirmation",
+                            "type": "YES_NO_MORE_TYPE"
+                        },
+                        {
+                            "name": "OrderTypeConfirmation",
+                            "type": "YES_NO_MORE_TYPE"
+                        },
+                        {
+                            "name": "PaymentMethod",
+                            "type": "PaymentType"
+                        }
+                    ],
+                    "samples": [
+                        "continue",
+                        "resume",
+                        "order my {OrderType} ",
+                        "{OrderType}",
+                        "a {OrderType}",
+                        "Order {OrderType}",
+                        "Order a {OrderType}",
+                        "select {OrderType}",
+                        "select a {OrderType}",
+                        "I would like to order a {OrderType}",
+                        "I would like a {OrderType}",
+                        "I would like to have a {OrderType}",
+                        "I will go for a {OrderType}",
+                        "go for a {OrderType}",
+                        "I would order a {OrderType}",
+                        "choose a {OrderType}",
+                        "choose from {OrderType}",
+                        "choose from a {OrderType}",
+                        "pick a {OrderType}",
+                        "pick from a {OrderType}",
+                        "opt a {OrderType}",
+                        "reorder a {OrderType}",
+                        "I would like to reorder {OrderType}",
+                        "order",
+                        "place an order",
+                        "order from {OrderType}",
+                        "order my {OrderType} {OrderName}",
+                        "{OrderName}",
+                        "select {OrderName}",
+                        "select the {OrderName}",
+                        "choose {OrderName}",
+                        "choose the {OrderName}",
+                        "go for the {OrderName}",
+                        "go for {OrderName}",
+                        "will go for {OrderName}",
+                        "will go for the {OrderName}",
+                        "I will go for {OrderName}",
+                        "I will go for the {OrderName}",
+                        "can you tell me more about the {OrderName}",
+                        "tell me more about the {OrderName}",
+                        "tell me the details of {OrderName}",
+                        "what all is in {OrderName}",
+                        "what is in {OrderName}",
+                        "what do you have in {OrderName}",
+                        "what does {OrderName} have",
+                        "what does {OrderName} have in it",
+                        "{AddressConfirmation}"
+                    ]
+                },
+                {
+                    "name": "clear",
+                    "slots": [],
+                    "samples": [
+                        "clear my order",
+                        "clear the items in my cart",
+                        "clear",
+                        "clear my cart"
+                    ]
+                },
+                {
+                    "name": "OutOfMVPScope",
+                    "slots": [],
+                    "samples": [
+                        "menu lists",
+                        "please call out menu list",
+                        "add new credit cards",
+                        "add new credit card",
+                        "add new delivery addresses",
+                        "add new delivery address",
+                        "take carry out order",
+                        "carry out order",
+                        "want carry out order",
+                        "add items in past order",
+                        "add items to past order",
+                        "add item to past order",
+                        "add item to recent",
+                        "add items to recent ",
+                        "add items in recent",
+                        "add item in recent ",
+                        "remove item in favorite",
+                        "remove items in favorite",
+                        "remove",
+                        "add items in favorite",
+                        "add item in favorite",
+                        "add item to favorite",
+                        "add items to favorite",
+                        "take new orders",
+                        "add new order",
+                        "add",
+                        "take new items",
+                        "take new item",
+                        "add new item",
+                        "add new items",
+                        "take new order",
+                        "include few more items",
+                        "drop few items",
+                        "change favorite",
+                        "edit favorite",
+                        "add new credit cards",
+                        "remove credit card"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StartOverIntent",
+                    "samples": [
+                        "start over the order again",
+                        "reset the order",
+                        "start again",
+                        "I want to start again",
+                        "reset",
+                        "start over"
+                    ]
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "OrderAddress",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "home",
+                                "synonyms": [
+                                    "home",
+                                    "house"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "work"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "OrderName",
+                    "values": [
+                        {
+                            "id": "last",
+                            "name": {
+                                "value": "last",
+                                "synonyms": [
+                                    "the last 1",
+                                    "the last one",
+                                    "last 1",
+                                    "last one",
+                                    "last"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "first",
+                            "name": {
+                                "value": "first",
+                                "synonyms": [
+                                    "1st 1",
+                                    "first",
+                                    "the first one",
+                                    "the 1st 1",
+                                    "the 1st one",
+                                    "1st one",
+                                    "first one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ninth",
+                            "name": {
+                                "value": "ninth",
+                                "synonyms": [
+                                    "9th one",
+                                    "the 9th one",
+                                    "the 9th 1",
+                                    "ninth one",
+                                    "the ninth one",
+                                    "ninth"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "eighth",
+                            "name": {
+                                "value": "eighth",
+                                "synonyms": [
+                                    "8th one",
+                                    "the 8th one",
+                                    "the 8th 1",
+                                    "eighth one",
+                                    "eighth",
+                                    "the eighth one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "seventh",
+                            "name": {
+                                "value": "seventh",
+                                "synonyms": [
+                                    "7th one",
+                                    "the 7th one",
+                                    "the 7th 1",
+                                    "seventh",
+                                    "seventh one",
+                                    "the seventh one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "sixth",
+                            "name": {
+                                "value": "sixth",
+                                "synonyms": [
+                                    "6th one",
+                                    "the 6th one",
+                                    "the 6th 1",
+                                    "sixth",
+                                    "the sixth",
+                                    "the sixth one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "fifth",
+                            "name": {
+                                "value": "fifth",
+                                "synonyms": [
+                                    "5th one",
+                                    "the 5th one",
+                                    "the 5th 1",
+                                    "fifth",
+                                    "fifth one",
+                                    "the fifth one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "fourth",
+                            "name": {
+                                "value": "fourth",
+                                "synonyms": [
+                                    "4th one",
+                                    "the 4th one",
+                                    "the 4th 1",
+                                    "fourth",
+                                    "fourth one",
+                                    "the fourth one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "third",
+                            "name": {
+                                "value": "third",
+                                "synonyms": [
+                                    "the 3rd one",
+                                    "the 3rd 1",
+                                    "3rd one",
+                                    "third",
+                                    "third one",
+                                    "the third one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "second",
+                            "name": {
+                                "value": "second",
+                                "synonyms": [
+                                    "2nd one",
+                                    "the 2nd 1",
+                                    "the 2nd one",
+                                    "second",
+                                    "second one",
+                                    "the second one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "lunch",
+                            "name": {
+                                "value": "lunch",
+                                "synonyms": [
+                                    "my favorite",
+                                    "chess",
+                                    "lunch",
+                                    "lunch special",
+                                    "dinner",
+                                    "dinner special",
+                                    "the usual",
+                                    "sunday",
+                                    "usual"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "OrderType",
+                    "values": [
+                        {
+                            "id": "favorite",
+                            "name": {
+                                "value": "favorite",
+                                "synonyms": [
+                                    "favorites",
+                                    "saved favorite",
+                                    "saved favorites",
+                                    "favorite",
+                                    "my favorite",
+                                    "the favorite"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "recentOrder",
+                            "name": {
+                                "value": "recentOrder",
+                                "synonyms": [
+                                    "recent",
+                                    "past order",
+                                    "last order",
+                                    "past",
+                                    "last",
+                                    "recent order"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "YES_NO_MORE_TYPE",
+                    "values": [
+                        {
+                            "id": "YES",
+                            "name": {
+                                "value": "YES",
+                                "synonyms": [
+                                    "yepp",
+                                    "yep",
+                                    "allright",
+                                    "right",
+                                    "all right",
+                                    "yes sure",
+                                    "yeah",
+                                    "please",
+                                    "sure",
+                                    "yeaah",
+                                    "yeaaah",
+                                    "yuppp",
+                                    "yupp",
+                                    "yes",
+                                    "yeah",
+                                    "yup",
+                                    "exactly",
+                                    "ok",
+                                    "go for it",
+                                    "yeah go ahead",
+                                    "yes please",
+                                    "correct",
+                                    "yes that one",
+                                    "yes please order"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "NO",
+                            "name": {
+                                "value": "NO",
+                                "synonyms": [
+                                    "nopes",
+                                    "naah",
+                                    "no not really",
+                                    "nah",
+                                    "no i don't",
+                                    "no don't",
+                                    "don't do that",
+                                    "no",
+                                    "naah",
+                                    "nopes",
+                                    "nope"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "MORE",
+                            "name": {
+                                "value": "MORE",
+                                "synonyms": [
+                                    "more",
+                                    "detail"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PaymentType",
+                    "values": [
+                        {
+                            "id": "last",
+                            "name": {
+                                "value": "last",
+                                "synonyms": [
+                                    "the last 1",
+                                    "the last one",
+                                    "last 1",
+                                    "last one",
+                                    "last"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "first",
+                            "name": {
+                                "value": "first",
+                                "synonyms": [
+                                    "1st 1",
+                                    "first",
+                                    "the first one",
+                                    "the 1st 1",
+                                    "the 1st one",
+                                    "1st one",
+                                    "first one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "cardnumber",
+                            "name": {
+                                "value": "cardnumber",
+                                "synonyms": [
+                                    "the 1 ending with",
+                                    "the one ending with",
+                                    "that ends with",
+                                    "card that ends with",
+                                    "ending with",
+                                    "card ending with"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "card",
+                            "name": {
+                                "value": "card",
+                                "synonyms": [
+                                    "using my card",
+                                    "card",
+                                    "by card"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ninth",
+                            "name": {
+                                "value": "ninth",
+                                "synonyms": [
+                                    "9th one",
+                                    "the 9th one",
+                                    "the 9th 1",
+                                    "ninth one",
+                                    "the ninth one",
+                                    "ninth"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "eighth",
+                            "name": {
+                                "value": "eighth",
+                                "synonyms": [
+                                    "8th one",
+                                    "the 8th one",
+                                    "the 8th 1",
+                                    "eighth one",
+                                    "eighth",
+                                    "the eighth one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "seventh",
+                            "name": {
+                                "value": "seventh",
+                                "synonyms": [
+                                    "7th one",
+                                    "the 7th one",
+                                    "the 7th 1",
+                                    "seventh",
+                                    "seventh one",
+                                    "the seventh one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "sixth",
+                            "name": {
+                                "value": "sixth",
+                                "synonyms": [
+                                    "6th one",
+                                    "the 6th one",
+                                    "the 6th 1",
+                                    "sixth",
+                                    "the sixth",
+                                    "the sixth one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "fifth",
+                            "name": {
+                                "value": "fifth",
+                                "synonyms": [
+                                    "5th one",
+                                    "the 5th one",
+                                    "the 5th 1",
+                                    "fifth",
+                                    "fifth one",
+                                    "the fifth one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "fourth",
+                            "name": {
+                                "value": "fourth",
+                                "synonyms": [
+                                    "4th one",
+                                    "the 4th one",
+                                    "the 4th 1",
+                                    "fourth",
+                                    "fourth one",
+                                    "the fourth one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "third",
+                            "name": {
+                                "value": "third",
+                                "synonyms": [
+                                    "the 3rd one",
+                                    "the 3rd 1",
+                                    "3rd one",
+                                    "third",
+                                    "third one",
+                                    "the third one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "second",
+                            "name": {
+                                "value": "second",
+                                "synonyms": [
+                                    "2nd one",
+                                    "the 2nd 1",
+                                    "the 2nd one",
+                                    "second",
+                                    "second one",
+                                    "the second one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "cash",
+                            "name": {
+                                "value": "cash",
+                                "synonyms": [
+                                    "i'll pay by cash",
+                                    "i will pay by cash",
+                                    "cash",
+                                    "by cash"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SearchFavorite",
+                    "values": [
+                        {
+                            "id": "last",
+                            "name": {
+                                "value": "last",
+                                "synonyms": [
+                                    "my last favorite",
+                                    "the last favorite",
+                                    "the last one",
+                                    "last 1",
+                                    "last",
+                                    "last one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ninth",
+                            "name": {
+                                "value": "ninth",
+                                "synonyms": [
+                                    "9th one",
+                                    "the 9th one",
+                                    "the 9th 1",
+                                    "ninth favorite",
+                                    "the ninth favorite",
+                                    "ninth one",
+                                    "the ninth one",
+                                    "ninth"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "eighth",
+                            "name": {
+                                "value": "eighth",
+                                "synonyms": [
+                                    "8th one",
+                                    "the 8th one",
+                                    "the 8th 1",
+                                    "the eighth favorite",
+                                    "eighth favorite",
+                                    "eighth one",
+                                    "eighth",
+                                    "the eighth one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "seventh",
+                            "name": {
+                                "value": "seventh",
+                                "synonyms": [
+                                    "7th one",
+                                    "the 7th one",
+                                    "the 7th 1",
+                                    "the seventh favorite",
+                                    "seventh favorite",
+                                    "seventh",
+                                    "seventh one",
+                                    "the seventh one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "sixth",
+                            "name": {
+                                "value": "sixth",
+                                "synonyms": [
+                                    "6th one",
+                                    "the 6th one",
+                                    "the 6th 1",
+                                    "the sixth favorite",
+                                    "sixth favorite",
+                                    "sixth",
+                                    "the sixth",
+                                    "the sixth one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "fifth",
+                            "name": {
+                                "value": "fifth",
+                                "synonyms": [
+                                    "5th one",
+                                    "the 5th one",
+                                    "the 5th 1",
+                                    "the fifth favorite",
+                                    "fifth favorite",
+                                    "fifth",
+                                    "fifth one",
+                                    "the fifth one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "fourth",
+                            "name": {
+                                "value": "fourth",
+                                "synonyms": [
+                                    "4th one",
+                                    "the 4th one",
+                                    "the 4th 1",
+                                    "the fourth favorite",
+                                    "fourth favorite",
+                                    "fourth",
+                                    "fourth one",
+                                    "the fourth one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "third",
+                            "name": {
+                                "value": "third",
+                                "synonyms": [
+                                    "the 3rd one",
+                                    "the 3rd 1",
+                                    "3rd one",
+                                    "the third favorite",
+                                    "third favorite",
+                                    "third",
+                                    "third one",
+                                    "the third one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "second",
+                            "name": {
+                                "value": "second",
+                                "synonyms": [
+                                    "2nd one",
+                                    "the 2nd 1",
+                                    "the 2nd one",
+                                    "second favorite",
+                                    "the second favorite",
+                                    "second",
+                                    "second one",
+                                    "the second one"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "first",
+                            "name": {
+                                "value": "first",
+                                "synonyms": [
+                                    "1st one",
+                                    "the 1st one",
+                                    "the 1st 1",
+                                    "the first favorite",
+                                    "first favorite",
+                                    "first",
+                                    "first one",
+                                    "the first one"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "order",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "OrderType",
+                            "type": "OrderType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-order.IntentSlot-OrderType"
+                            }
+                        },
+                        {
+                            "name": "OrderName",
+                            "type": "SearchFavorite",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "AddressConfirmation",
+                            "type": "YES_NO_MORE_TYPE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-order.IntentSlot-AddressConfirmation"
+                            }
+                        },
+                        {
+                            "name": "OrderConfirmation",
+                            "type": "YES_NO_MORE_TYPE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-order.IntentSlot-OrderConfirmation"
+                            }
+                        },
+                        {
+                            "name": "CartConfirmation",
+                            "type": "YES_NO_MORE_TYPE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-order.IntentSlot-CartConfirmation"
+                            }
+                        },
+                        {
+                            "name": "OrderTypeConfirmation",
+                            "type": "YES_NO_MORE_TYPE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1476658430956.1368624205890"
+                            }
+                        },
+                        {
+                            "name": "PaymentMethod",
+                            "type": "PaymentType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "clear",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": []
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Intent-order.IntentSlot-OrderType",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I can order your favorites or last order, which one would you like to order?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-order.IntentSlot-AddressConfirmation",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you wanna go ahead with this address?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-order.IntentSlot-OrderConfirmation",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you wanna place this order?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-order.IntentSlot-CartConfirmation",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you wanna place this order?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-order.IntentSlot-CardConfirmation",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you wanna go ahead with this card?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1476658430956.1368624205890",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What do you want to order?"
+                    }
+                ]
+            }
+        ]
+    }
+}

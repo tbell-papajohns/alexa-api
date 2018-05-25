@@ -1,0 +1,58 @@
+# Copyright 2015 Google Inc. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: alexa-skill-handler-service
+spec:
+  ports:
+  - port: 80
+    targetPort: 8081
+    protocol: TCP
+    name: http
+  selector:
+    app: alexa-skill-handler
+  type: NodePort
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: alexa-skill-handler
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: alexa-skill-handler
+    spec:
+      containers:
+      - name: esp
+        image: gcr.io/endpoints-release/endpoints-runtime:1
+        args: [
+          "-p", "8081",
+          "-a", "127.0.0.1:8080",
+          "-s", "alexa.endpoints.qa-orders-pj.cloud.goog",
+          "--rollout_strategy", "managed",
+        ]
+        ports:
+          - containerPort: 8081
+      - name: order-api
+        #image: gcr.io/endpoints-release/echo:latest
+        image: gcr.io/qa-orders/alexa-skill-handler-image:v1
+        ports:
+          - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: alexa-skill-handler-config
